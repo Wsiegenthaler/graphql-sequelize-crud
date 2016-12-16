@@ -30,9 +30,9 @@ const {
     sequelizeNodeInterface,
     sequelizeConnection
   }
-} = require("graphql-sequelize");
+} = require("@weston/graphql-sequelize");
 
-const jsonType = require("graphql-sequelize/lib/types/jsonType.js");
+const jsonType = require("@weston/graphql-sequelize/lib/types/jsonType.js");
 
 function connectionNameForAssociation(Model, associationName) {
   return camelcase(`${Model.name}_${associationName}`);

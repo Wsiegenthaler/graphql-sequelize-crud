@@ -1,5 +1,5 @@
 {
-  "name": "graphql-sequelize-crud",
+  "name": "@weston/graphql-sequelize-crud",
   "version": "0.2.0",
   "description": "Automatically generate queries and mutations from Sequelize models",
   "main": "lib/index.js",
@@ -64,7 +64,7 @@
   "peerDepedencies": {
     "graphql": "^0.6.0",
     "graphql-relay": "^0.4.2",
-    "graphql-sequelize": "^2.2.0",
+    "@weston/graphql-sequelize": "^2.2.0",
     "sequelize": "^3.23.4"
   }
 }
