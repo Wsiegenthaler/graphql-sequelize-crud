@@ -7,11 +7,12 @@
     "test": "test"
   },
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublish": "npm run snyk-protect; npm run build",
     "test": "mocha --compilers js:babel-core/register",
     "build": "rm -rf lib/* && babel src --ignore test --out-dir lib",
     "demo": "babel-node demo/",
-    "viz": "echo \"Make sure server is started.\"; graphqlviz http://localhost:3000/graphql | dot -Tpng -o graph.png"
+    "viz": "echo \"Make sure server is started.\"; graphqlviz http://localhost:3000/graphql | dot -Tpng -o graph.png",
+    "snyk-protect": "snyk protect"
   },
   "repository": {
     "type": "git",
@@ -59,12 +60,14 @@
     "bluebird": "^3.4.1",
     "camelcase": "^3.0.0",
     "lodash": "^4.13.1",
-    "pluralize": "^3.0.0"
+    "pluralize": "^3.0.0",
+    "snyk": "^1.192.3"
   },
   "peerDepedencies": {
     "graphql": "^0.6.0",
     "graphql-relay": "^0.4.2",
     "@weston/graphql-sequelize": "^2.2.0",
     "sequelize": "^3.23.4"
-  }
+  },
+  "snyk": true
 }
